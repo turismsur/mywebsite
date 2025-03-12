@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Single-Page HTML Website</title>
+  <style>
+    #content {
+      padding: 20px;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="content">
+    <h1>Welcome to My HTML Website!</h1>
+    <p>This is the home page.</p>
+    <button onclick="showAbout()">About</button>
+    <button onclick="showContact()">Contact</button>
+    <br><br>
+    <button onclick="printMessage()">Print Message</button>
+    <p id="messageArea"></p>
+  </div>
+
+  <script>
+    function showAbout() {
+      document.getElementById("content").innerHTML = `
+        <h1>About Us</h1>
+        <p>We are a simple HTML website.</p>
+        <button onclick="showHome()">Home</button>
+        <button onclick="showContact()">Contact</button>
+        <br><br>
+        <button onclick="printMessage()">Print Message</button>
+        <p id="messageArea"></p>
+      `;
+    }
+
+    function showContact() {
+      document.getElementById("content").innerHTML = `
+        <h1>Contact Us</h1>
+        <p>Email: example@html.com</p>
+        <button onclick="showHome()">Home</button>
+        <button onclick="showAbout()">About</button>
+        <br><br>
+        <button onclick="printMessage()">Print Message</button>
+        <p id="messageArea"></p>
+      `;
+    }
+
+    function showHome() {
+      document.getElementById("content").innerHTML = `
+        <h1>Welcome to My HTML Website!</h1>
+        <p>This is the home page.</p>
+        <button onclick="showAbout()">About</button>
+        <button onclick="showContact()">Contact</button>
+        <br><br>
+        <button onclick="printMessage()">Print Message</button>
+        <p id="messageArea"></p>
+      `;
+    }
+
+    function printMessage() {
+      document.getElementById("messageArea").innerHTML = "Button clicked!";
+    }
+  </script>
+
+</body>
+  </html>
+  
